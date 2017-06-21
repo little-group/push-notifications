@@ -3,6 +3,11 @@
  */
 'use strict';
 
+$('#workers_tabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show');
+})
+
 var worker = new Worker('assets/js/doWork.js');
 
 worker.addEventListener('message', function(e) {
