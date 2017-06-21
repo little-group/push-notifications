@@ -1,7 +1,7 @@
 /**
  * Created by Дмитрий on 21.06.2017.
  */
-var worker = new Worker('doWork.js');
+var worker = new Worker('assets/js/doWork.js');
 
 worker.addEventListener('message', function(e) {
     $('#messages').append('<p class="bg-info">' + e.data + '</p>');
