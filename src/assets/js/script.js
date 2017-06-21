@@ -1,24 +1,22 @@
 /**
  * Created by Дмитрий on 21.06.2017.
  */
+'use strict';
+
 var worker = new Worker('assets/js/doWork.js');
 
 worker.addEventListener('message', function(e) {
-    $('#messages').append('<p class="bg-info">' + e.data + '</p>');
-}, false);
-
-worker.addEventListener('message2', function(e) {
-    $('#messages').append('<p class="bg-primary">' + e.data + '</p>');
-}, false);
-
-worker.addEventListener('message3', function(e) {
-    $('#messages').append('<p class="bg-warning">' + e.data + '</p>');
+    $('#messages').append('<p class="' + e + '">' + e + '</p>');
 }, false);
 
 function makeTheWorkerCryLikeABitch() {
-    worker.postMessage('Im crying like a bitch');
+    worker.postMessage({
+        'test': 'mama'
+    });
 }
 
 function makeTheWorkerCryLikeTwoBitchesBitch() {
-    worker.postMessage('Im crying like two bitches');
+    worker.postMessage({
+        'test': 'lava'
+    });
 }
