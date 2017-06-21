@@ -4,9 +4,10 @@
 'use strict';
 
 $('#workers_tabs a').click(function (e) {
-    e.preventDefault()
+    e.preventDefault();
     $(this).tab('show');
-})
+});
+$('.dropdown-toggle').dropdown();
 
 var worker = new Worker('assets/js/doWork.js');
 
