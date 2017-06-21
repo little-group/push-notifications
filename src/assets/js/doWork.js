@@ -5,6 +5,8 @@
 
 self.addEventListener('message', function(e) {
 
+    console.log(e);
+
     var data = 'primary';
 
     switch(e.test) {

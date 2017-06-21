@@ -6,7 +6,8 @@
 var worker = new Worker('assets/js/doWork.js');
 
 worker.addEventListener('message', function(e) {
-    $('#messages').append('<p class="' + e + '">' + e + '</p>');
+    console.log(e);
+    $('#messages').append('<p class="' + e.data + '">' + e.data + '</p>');
 }, false);
 
 function makeTheWorkerCryLikeABitch() {
