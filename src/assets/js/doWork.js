@@ -5,11 +5,9 @@
 
 self.addEventListener('message', function(e) {
 
-    console.log(e);
+    var data = 'bg-primary';
 
-    var data = 'primary';
-
-    switch(e.test) {
+    switch(e.data.test) {
         case "mama": data = 'bg-info'; break;
         case "lava": data = 'bg-warning'; break;
     }

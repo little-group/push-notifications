@@ -6,7 +6,6 @@
 var worker = new Worker('assets/js/doWork.js');
 
 worker.addEventListener('message', function(e) {
-    console.log(e);
     $('#messages').append('<p class="' + e.data + '">' + e.data + '</p>');
 }, false);
 
